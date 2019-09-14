@@ -117,7 +117,7 @@ const Window = ({ changeMenu, index, Lang }) => (
               </Title>
               {index === 0 && <Project />}
               {index === 1 && <AboutMe changeMenu={changeMenu} />}
-              {index === 2 && <Terminal />}
+              {index === 2 && <Terminal changeMenu={changeMenu} />}
               {index === 5 && <Info changeMenu={changeMenu} />}
       </WindowWrapper>
 );

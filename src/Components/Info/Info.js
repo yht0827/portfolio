@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { scale } from "../Common/Keyframe";
+import { scale } from "Components/Common/Keyframe";
 
 const Information = styled.div`
     width: 100%;
@@ -72,7 +72,7 @@ const Info = ({changeMenu}) => {
             <InfoWrapper>
                 <InfoLogo src="Images/react.png" />
                 <InfoDetail>
-                    <InfoDetailTitle>React.js Protfolio</InfoDetailTitle>
+                    <InfoDetailTitle>React.js Portfolio</InfoDetailTitle>
                     <InfoDetailText>
                         Developer : <b>YHT</b>
                     </InfoDetailText>
@@ -84,7 +84,7 @@ const Info = ({changeMenu}) => {
                     </InfoDetailText>
                     <InfoDetailText>
                         <SourceLink>
-                        Source code: <a href="https://github.com/yht0827">Github</a>
+                        Source code: <a href="https://github.com/yht0827/portfolio">Github</a>
                         </SourceLink>
                     </InfoDetailText>
                 </InfoDetail>

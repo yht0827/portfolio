@@ -70,7 +70,7 @@ const Item = () => {
   return(
       <ItemWrapper>
         <ItemTitle>BitMiner</ItemTitle>
-        <ItemImage src="logo192.png" />
+        <ItemImage src="Images/Mario.jpg" />
         <ItemUsedLang >JavaScript</ItemUsedLang>
         <ItemInfo>
         <ItemInfoTextColor color="dodgerblue">Information</ItemInfoTextColor>  

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import commandCheck from "Components/Terminal/commandCheck";
 
 const TerminalWrapper = styled.div`
     width: 100%;
@@ -15,8 +16,17 @@ const CommandArea = styled.div`
     color: #fff;
 `;
 
+const CommandWrapper = styled.div`
+`;
+
 const Command = styled.div`
     font-size: 19px;
+`;
+
+const CommandResult = styled.pre`
+    color: ${props => props.command === "ls" && "#3498db"};
+    font-style: ${props => props.command === "ls" && "italic"};
+    font-family: ${props => (props.command === "ls -al" || props.command === "ls -l" || props.command === "ll")  && "monospace"};
 `;
 
 const CommandUser = styled.b`
@@ -34,7 +44,7 @@ const CommandInput = styled.input`
         padding: 2px 5px;
 `;
 
-const Terminal = () => {
+const Terminal = ({changeMenu}) => {
 
     const [command,setcommand] = useState("");
     const [CommandArr,setArr] = useState([]);
@@ -45,9 +55,14 @@ const Terminal = () => {
 
     const commandExec = (value) => {
         const command = value.toLowerCase();
-        setArr(CommandArr => [...CommandArr,{command:command,
-            result:[`${command}: Command Not found`],
-       }]);
+        if(command === "clear"){
+            setArr([]);
+        }else if(command === "exit"){
+            changeMenu(false);
+        }else{
+            const result = commandCheck(command);
+            setArr(CommandArr => [...CommandArr,result]);
+        }
        setcommand("");
     };
 
@@ -62,15 +77,17 @@ const Terminal = () => {
             <CommandArea>
                {CommandArr.map((com,index) => {
                  return (    
-                     <div key={index}>    
+                     <CommandWrapper key={index}>    
                     <Command>
                         <CommandUser>HT@ubuntu</CommandUser>:~$&nbsp;{com.command}
                     </Command>
                     {  com.result.map((result,subindex) =>
-                       <p key={subindex}>{result}</p>)}
-                    </div>
+                       <CommandResult command={com.command} key={subindex}>{result}</CommandResult>)}
+                    </CommandWrapper>
                     );
-                    })}
+                    }
+                    )
+                }
                     <Command>
                         <CommandUser>HT@ubuntu</CommandUser>:~$&nbsp;
                         <CommandInput autoFocus type="text" value={command} onChange={event => handleChange(event)} onKeyPress={event => handleKey(event)} />

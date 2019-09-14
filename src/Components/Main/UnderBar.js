@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { CSSTransition } from "react-transition-group";
-import {startmenu } from "./data";
+import {startmenu } from "Components/Main/data";
 import * as LangActions from "redux/modules/Lang";
 
 const TaskBar = styled.div`

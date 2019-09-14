@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Item from "./Item";
+import Item from "Components/Project/Item";
 
 const Content = styled.div`
 position: absolute;

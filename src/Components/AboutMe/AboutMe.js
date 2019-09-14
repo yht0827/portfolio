@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { bounce } from "../Common/Keyframe";
+import { bounce } from "Components/Common/Keyframe";
 
 const About = styled.div`
   width: 100%;
