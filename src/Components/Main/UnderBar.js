@@ -167,8 +167,9 @@ const UnderBar = ({changeLog}) => {
                 <MenuImg src="Images/window.png" />
             </MenuButton>
             <MenuTime>
+                {Lang=== "kr" && getAP(Lang)}&nbsp;
                 {date.toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"})}&nbsp;
-                {getAP(Lang)}
+                {Lang=== "en" && getAP(Lang)}
             </MenuTime>
         </TaskBar>
         <CSSTransition in={openMenu} classNames="fade" timeout={300} unmountOnExit>

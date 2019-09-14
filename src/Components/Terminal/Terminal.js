@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const TerminalWrapper = styled.div`
@@ -36,13 +36,45 @@ const CommandInput = styled.input`
 
 const Terminal = () => {
 
+    const [command,setcommand] = useState("");
+    const [CommandArr,setArr] = useState([]);
+
+    const handleChange = e => {
+        setcommand(e.target.value);
+    };
+
+    const commandExec = (value) => {
+        const command = value.toLowerCase();
+        setArr(CommandArr => [...CommandArr,{command:command,
+            result:[`${command}: Command Not found`],
+       }]);
+       setcommand("");
+    };
+
+    const handleKey = e => {
+        if(e.charCode === 13){
+         commandExec(command);
+        }
+    };
+    
     return (
         <TerminalWrapper>
             <CommandArea>
-                <Command>
-                    <CommandUser>HT@ubuntu</CommandUser>:~$&nbsp;
-                    <CommandInput />
-                </Command>
+               {CommandArr.map((com,index) => {
+                 return (    
+                     <div key={index}>    
+                    <Command>
+                        <CommandUser>HT@ubuntu</CommandUser>:~$&nbsp;{com.command}
+                    </Command>
+                    {  com.result.map((result,subindex) =>
+                       <p key={subindex}>{result}</p>)}
+                    </div>
+                    );
+                    })}
+                    <Command>
+                        <CommandUser>HT@ubuntu</CommandUser>:~$&nbsp;
+                        <CommandInput autoFocus type="text" value={command} onChange={event => handleChange(event)} onKeyPress={event => handleKey(event)} />
+                    </Command>
             </CommandArea>
         </TerminalWrapper>
     );

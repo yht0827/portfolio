@@ -38,7 +38,7 @@ const InfoDetail = styled.div`
 const InfoDetailTitle = styled.div`
         margin-top: 10px;
         margin-bottom: 20px;
-        color: #41b883;
+        color: #60D9FA;
         font-weight: bold;
         font-size: 1.2rem;
 `;
@@ -70,7 +70,7 @@ const Info = ({changeMenu}) => {
     return (
         <Information>
             <InfoWrapper>
-                <InfoLogo src="Images/Mario.jpg" />
+                <InfoLogo src="Images/react.png" />
                 <InfoDetail>
                     <InfoDetailTitle>React.js Protfolio</InfoDetailTitle>
                     <InfoDetailText>
