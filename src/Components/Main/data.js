@@ -99,7 +99,7 @@ const profiles = {
         major : "Major",
         majors: ["Information and Communications", "Computer Engineering"],
         certificate: "Certificate",
-        certificates:["Engineer information security","Engineer Information Processing","SQLD","CSTS(AL)"],
+        certificates:["Engineer information security","Engineer Information Processing","SQLD","CSTS(AL)","Computer Usage Literacy(1 Grade)"],
     },
     "kr" : {
         name : "양희태",
@@ -110,7 +110,7 @@ const profiles = {
         major : "전공",
         majors: ["정보통신전자공학", "컴퓨터공학"],
         certificate: "자격증",
-        certificates:["정보보안기사","정보처리기사","SQL개발자(SQLD)","SW 테스트 전문가(일반)"],
+        certificates:["정보보안기사","정보처리기사","SQL개발자(SQLD)","SW 테스트 전문가(일반)","컴퓨터 활용능력(1급)"],
     },
 };
 
