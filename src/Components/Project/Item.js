@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
+import { projects } from "Components/Main/data";
 
 const ItemWrapper = styled.div`
 width: 90%;
@@ -52,6 +54,7 @@ const ItemInfoText = styled.div`
 `;
 const ItemInfoTextColor = styled.b`
     color: ${props=> props.color};
+    font-size: 23px;
 `;
 
 const ItemUsedLang = styled.div`
@@ -59,30 +62,31 @@ const ItemUsedLang = styled.div`
     margin: 10px 0;
     font-size: 1.5rem;
     font-weight: bold;
-    color: gray;
+    color: yellowgreen;
 `;
 
 const Item = () => {
-    const showPage = (url) => {
+  const Lang = useSelector(state => state.Lang.lang);
+  const showPage = (url) => {
       window.open(url);
   };
 
   return(
-      <ItemWrapper>
-        <ItemTitle>BitMiner</ItemTitle>
-        <ItemImage src="Images/Mario.jpg" />
-        <ItemUsedLang >JavaScript</ItemUsedLang>
-        <ItemInfo>
-        <ItemInfoTextColor color="dodgerblue">Information</ItemInfoTextColor>  
-        <ItemInfoText>Electron + Vue.js based game</ItemInfoText>
-        <ItemInfoText>Cross platform game!</ItemInfoText>
-        </ItemInfo>
-        <ItemInfo>
-        <ItemInfoTextColor color="dodgerblue">date</ItemInfoTextColor>  
-        <ItemInfoText>2019</ItemInfoText>
-        </ItemInfo> 
-        <ItemMoreButton onClick={() => showPage("https://www.google.com")}>more</ItemMoreButton>
-      </ItemWrapper>
+        projects[Lang]["projects"].map((project, index)=>
+            <ItemWrapper key={index}>
+                <ItemTitle>{project.title}</ItemTitle>
+                <ItemImage src={project.img} />
+                <ItemUsedLang >{project.lang}</ItemUsedLang>
+                <ItemInfo>
+                  <ItemInfoTextColor color="sandybrown">{Lang === "en"? "Information":"정보"}</ItemInfoTextColor>  
+                    { project.infotext.map((text,subindex) => <ItemInfoText key={subindex}>{text}</ItemInfoText>)}
+                </ItemInfo>
+                <ItemInfo>
+                  <ItemInfoTextColor color="indianred">{Lang === "en"? "Date":"날짜"}</ItemInfoTextColor>  
+                  <ItemInfoText>{project.year}</ItemInfoText>
+                </ItemInfo> 
+                <ItemMoreButton onClick={() => showPage(project.showpage)}>{Lang === "en"? "more":"더보기"}</ItemMoreButton>
+            </ItemWrapper>)
     )
 };
 

@@ -12,7 +12,7 @@ const WindowWrapper = styled.div`
   margin: 0;
   margin: auto;
   width: 45rem;
-  height: 30rem;
+  height: 40rem;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   transition: opacity 0.5s;
@@ -33,7 +33,7 @@ const WindowWrapper = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% - 50px);
+    height: calc(100% - 80px);
     -webkit-transform: none;
        -moz-transform: none;
         -ms-transform: none;
@@ -42,7 +42,7 @@ const WindowWrapper = styled.div`
   }
   @media only screen and (min-width: 768px) {
     width: 65%;
-    height: 60%;
+    height: 70%;
     top: calc(50% - 50px);
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -53,7 +53,7 @@ const WindowWrapper = styled.div`
   }
   @media only screen and (min-width: 1224px) {
     width: 45rem;
-    height: 30rem;
+    height: 40rem;
     top: calc(50% - 50px);
     left: 50%;
     -webkit-transform: translate(-50%, -50%);

@@ -21,7 +21,7 @@ const ProjectView = styled.div`
 `;
 
 const Project = () => {
-
+    
    return(
             <Content>
                 <ProjectView>

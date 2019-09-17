@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
 import { bounce } from "Components/Common/Keyframe";
+import { profiles } from "Components/Main/data";
 
 const About = styled.div`
   width: 100%;
@@ -13,21 +15,23 @@ const About = styled.div`
 `;
 
 const ProfileImg = styled.img`
+    width: 150px;
     border: 5px solid #fff;
     border-radius: 50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
     @media only screen and (min-width: 320px) {
-      margin-top: 12%;
+      margin-top: 10%;
     }
     @media only screen and (min-width: 768px) {
-      margin-top: 14%;
+      margin-top: 8%;
     }
     @media only screen and (min-width: 1224px) {
-      margin-top: 26px;
+      margin-top: 60px;
     }
 `;
 
 const ProfileName = styled.div`
+    margin-top: 5px;
     font-size: 1rem;
     font-weight: bold;
 `;
@@ -38,7 +42,7 @@ const ProfileBirth = styled.div`
 `;
 
 const ProfileMotto = styled.div`
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 1rem;
     font-weight: bold;
     color: gray;
@@ -46,19 +50,21 @@ const ProfileMotto = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-    margin-top: 3rem;
+    margin-top: 1.2rem;
 `;
 
 const ContentTitle = styled.div`
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    margin-bottom: 3px;
+    color: ${props => props.color};
 `;
 
 const ContentText = styled.div`
     margin-bottom: 5px;
     font-weight: bold;
-    font-size: 1.1rem;
-    color: gray;
+    font-size: 1rem;
+    color: ${props => props.color};
 `;
 
 const BackButton = styled.button`
@@ -77,16 +83,25 @@ const BackButton = styled.button`
 
 const AboutMe = ({changeMenu}) => {
 
+    const Lang = useSelector(state => state.Lang.lang);
+
     return (
         <About>
             <ProfileImg src="Images/Mario.jpg" />
-            <ProfileName>YangHeeTae</ProfileName>
-            <ProfileBirth>Birthday 1992.08.27</ProfileBirth>
-            <ProfileMotto>Motto: Don't Give up</ProfileMotto>
+            <ProfileName>{profiles[Lang]["name"]}</ProfileName>
+            <ProfileBirth>{profiles[Lang]["birth"]}</ProfileBirth>
+            <ProfileMotto>{profiles[Lang]["motto"]}</ProfileMotto>
             <ContentWrapper>
-                <ContentTitle>학력</ContentTitle>
-                <ContentText>가톨릭대학교</ContentText>
-                <ContentText>인창고등학교</ContentText>
+                <ContentTitle color="#e55039">{profiles[Lang]["grade"]}</ContentTitle>
+                <ContentText color="#8395a7">{profiles[Lang]["uni"]}</ContentText>
+            </ContentWrapper>
+            <ContentWrapper>
+                <ContentTitle color="#fa983a">{profiles[Lang]["major"]}</ContentTitle>
+                { profiles[Lang].majors.map((major,index) => <ContentText key={index} color="#8395a7">{major}</ContentText>)}
+            </ContentWrapper>
+            <ContentWrapper>
+                <ContentTitle color="#10ac84">{profiles[Lang]["certificate"]}</ContentTitle>
+                { profiles[Lang].certificates.map((cert,index) => <ContentText key={index} color="#8395a7">{cert}</ContentText> )}
             </ContentWrapper>
             <BackButton onClick={() => changeMenu(false)}>Back</BackButton>
         </About>

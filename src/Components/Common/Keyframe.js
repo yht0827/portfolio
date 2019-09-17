@@ -1,5 +1,15 @@
 import { keyframes } from "styled-components";
 
+const spin = keyframes`
+  from {
+    transform: none;
+  }
+
+  to {
+    transform: rotateY(1turn);
+  }
+`;
+
 const bounce = keyframes`
     0% {
       color: red;
@@ -28,4 +38,4 @@ const scale = keyframes`
   }
 `;
 
-export { bounce, scale };
+export { bounce, scale, spin };

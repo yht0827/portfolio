@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
-import commandCheck from "Components/Terminal/commandCheck";
+import { commandCheck } from "Components/Main/data";
 
 const TerminalWrapper = styled.div`
     width: 100%;
@@ -48,6 +49,7 @@ const Terminal = ({changeMenu}) => {
 
     const [command,setcommand] = useState("");
     const [CommandArr,setArr] = useState([]);
+    const Lang = useSelector(state => state.Lang.lang);
 
     const handleChange = e => {
         setcommand(e.target.value);
@@ -81,7 +83,7 @@ const Terminal = ({changeMenu}) => {
                     <Command>
                         <CommandUser>HT@ubuntu</CommandUser>:~$&nbsp;{com.command}
                     </Command>
-                    {  com.result.map((result,subindex) =>
+                    {  com[Lang].map((result,subindex) =>
                        <CommandResult command={com.command} key={subindex}>{result}</CommandResult>)}
                     </CommandWrapper>
                     );

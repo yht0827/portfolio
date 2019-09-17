@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
 import { scale } from "Components/Common/Keyframe";
+import { infos } from "Components/Main/data";
 
 const Information = styled.div`
     width: 100%;
@@ -15,18 +17,18 @@ const InfoWrapper = styled.div`
     height: 100%;
     overflow-y: auto;
     @media only screen and (min-width: 320px) {
-      padding-top: 10%;
+      padding-top: 30%;
     }
     @media only screen and (min-width: 768px) {
       padding-top: 5%;
     }
     @media only screen and (min-width: 1224px) {
-      padding-top: 10px;
+      padding-top: 130px;
     }
 `;
 
 const InfoLogo = styled.img`
-    width: 10rem;
+    width: 20rem;
     transform: scale(.5);
     animation: ${scale} 1s alternate infinite;
 `;
@@ -40,15 +42,18 @@ const InfoDetailTitle = styled.div`
         margin-bottom: 20px;
         color: #60D9FA;
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 2rem;
 `;
 
 const InfoDetailText = styled.div`
         margin: 5px 0;
+        font-size: 1rem;
+        color : #4b6584;
 `;
 
 const SourceLink = styled.div`
       margin: 25px 0;
+      font-size: 1rem;
 `;
 
 const BackButton = styled.button`
@@ -67,28 +72,30 @@ const BackButton = styled.button`
 
 const Info = ({changeMenu}) => {
 
+    const Lang = useSelector(state => state.Lang.lang);
+
     return (
         <Information>
             <InfoWrapper>
                 <InfoLogo src="Images/react.png" />
                 <InfoDetail>
-                    <InfoDetailTitle>React.js Portfolio</InfoDetailTitle>
+                    <InfoDetailTitle>{infos[Lang]["title"]}</InfoDetailTitle>
                     <InfoDetailText>
-                        Developer : <b>YHT</b>
+                    {infos[Lang]["developer"]}<b>{infos[Lang]["name"]}</b>
                     </InfoDetailText>
                     <InfoDetailText>
-                        Development end date : <b>2019/05/25</b>
+                    {infos[Lang]["enddate"]}<b>2019/05/25</b>
                     </InfoDetailText>
                     <InfoDetailText>
-                        Languages : React With hooks
+                    {infos[Lang]["language"]}
                     </InfoDetailText>
                     <InfoDetailText>
                         <SourceLink>
-                        Source code: <a href="https://github.com/yht0827/portfolio">Github</a>
+                        {infos[Lang]["source"]} <a href="https://github.com/yht0827/portfolio">{infos[Lang]["github"]}</a>
                         </SourceLink>
                     </InfoDetailText>
                 </InfoDetail>
-                <BackButton onClick={() => changeMenu(false)}>Back</BackButton>
+                <BackButton onClick={() => changeMenu(false)}>{infos[Lang]["back"]}</BackButton>
             </InfoWrapper>
         </Information>
     );

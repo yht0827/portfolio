@@ -6,7 +6,7 @@ import { Icon, UnderBar } from "Components/Main"
 import { Helmet } from "react-helmet";
 import { Loginmenu } from "Components/Main/data";
 import * as LangActions from "redux/modules/Lang";
-import { bounce } from "Components/Common/Keyframe";
+import { bounce, spin } from "Components/Common/Keyframe";
 import FadeIn from "react-fade-in";
 
 const Background = styled.div`
@@ -65,7 +65,7 @@ const UserProfile = styled.div`
       margin-top: 25%;
     }
     @media only screen and (min-width: 1224px) {
-      margin-top: 10%;
+      margin-top: 15%;
     }
 `;
 
@@ -75,12 +75,14 @@ const ProfileImg = styled.img`
       border-radius: 50%;
       border: 3px solid #fff;
       background-color: #fff;
+      animation: ${props=> props.ani === true && spin} 1.7s linear infinite;
+      margin-bottom: 5px;
 `;
 
 const ProfileName = styled.p`
       color: #fff;
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 2rem;
 `;
 
 const ButtonArea = styled.div`
@@ -108,8 +110,8 @@ const StyledButton = styled.button`
 const LoginMessage = styled.div`
       width: 100%;
       font-weight: bold;
-      font-size: 2rem;
-      color: #fff;
+      font-size: 1.5rem;
+      color: #D980FA;
       text-align: center;
 `;
 
@@ -167,6 +169,7 @@ const App = () => {
       }else{
         setBt(true);
         setTimeout(() => dispatch(LangActions.changeLog({isLogged:true})),2500);
+
       }
     };
 
@@ -227,7 +230,7 @@ const App = () => {
                 :
               <Login>
                   <UserProfile>
-                      <ProfileImg src="Images/Mario.jpg" />
+                      <ProfileImg src="Images/Mario.jpg" ani={clickBt} />
                       <ProfileName>{Loginmenu[Lang].name}</ProfileName>
                   </UserProfile>
                   <ButtonArea>
