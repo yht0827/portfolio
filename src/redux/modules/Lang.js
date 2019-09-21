@@ -38,5 +38,4 @@ const reducer = handleActions({
 
 },initialState);
 
-export default applyPenders(reducer,[
-]);
+export default applyPenders(reducer,[]);

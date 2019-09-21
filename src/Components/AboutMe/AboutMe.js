@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useSelector } from "react-redux";
+import { useStore } from "react-redux";
 import { bounce } from "Components/Common/Keyframe";
 import { profiles } from "Components/Main/data";
 
@@ -83,7 +83,7 @@ const BackButton = styled.button`
 
 const AboutMe = ({changeMenu}) => {
 
-    const Lang = useSelector(state => state.Lang.lang);
+    const Lang = useStore().getState().Lang.lang;
 
     return (
         <About>

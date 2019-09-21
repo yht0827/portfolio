@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useStore } from "react-redux";
 import styled from "styled-components";
 import { commandCheck } from "Components/Main/data";
 
@@ -49,7 +49,7 @@ const Terminal = ({changeMenu}) => {
 
     const [command,setcommand] = useState("");
     const [CommandArr,setArr] = useState([]);
-    const Lang = useSelector(state => state.Lang.lang);
+    const Lang = useStore().getState().Lang.lang;
 
     const handleChange = e => {
         setcommand(e.target.value);

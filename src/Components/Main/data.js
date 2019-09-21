@@ -6,8 +6,8 @@ const folders = [
         "image": Dir+"folder.png" 
     },
     {
-        "kr-name": "내 정보",
-        "en-name": "About Me",
+        "kr-name": "프로필",
+        "en-name": "Profile",
         "image": Dir+"Me.png"
     },
     {
@@ -72,7 +72,7 @@ const infos = {
     developer: "Developer : ",
     name: "YHT",
     enddate: "Development end date : ",
-    language: "Languages : React With hooks",
+    language: "Languages : React Hooks",
     source : "Source code : ",
     github : "Github",
     back : "back"
@@ -81,8 +81,8 @@ const infos = {
         title: "리액트 기반 포트폴리오",
         developer: "개발자 : ",
         name: "양희태",
-        enddate: "개발 완료 일자 : ",
-        language: "사용언어 : 리액트 & 리액트 hooks",
+        enddate: "개발 완료 : ",
+        language: "사용언어 : 리액트 훅스",
         source : "소스 코드 : ",
         github : "깃 허브",
         back : "뒤로 가기"

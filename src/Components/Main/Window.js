@@ -101,10 +101,22 @@ const Button = styled.span`
 
 const TitleContent = styled.div`
     height: 100%;
-    margin-left: 35%;
     line-height: 30px;
     color: #dbdee0;
     font-weight: bold;
+
+    @media only screen and (min-width: 320px) {
+        margin-left: 35%;  
+    }
+
+    @media only screen and (min-width: 768px) {
+        margin-left: 40%;
+    }
+
+    @media only screen and (min-width: 1224px) {
+        margin-left: 40%;
+    }
+
 `;
 
 const Window = ({ changeMenu, index, Lang }) => (

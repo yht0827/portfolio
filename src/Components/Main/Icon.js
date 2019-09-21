@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { useSelector } from "react-redux";
+import { useStore } from "react-redux";
 import { CSSTransition } from "react-transition-group";
 import Window from "Components/Main/Window";
 import { folders } from "Components/Main/data";
@@ -63,7 +63,7 @@ const CSSWrapper = styled.div`
 const Icon = () => {
     const [index,setindex] = useState(0);
     const [openMenu,setMenu] = useState(false);
-    const Lang = useSelector(state => state.Lang.lang);
+    const Lang = useStore().getState().Lang.lang;
 
     const changeAction = (index) => {
       

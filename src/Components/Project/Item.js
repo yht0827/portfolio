@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useSelector } from "react-redux";
+import { useStore } from "react-redux";
 import { projects } from "Components/Main/data";
 
 const ItemWrapper = styled.div`
@@ -66,7 +66,7 @@ const ItemUsedLang = styled.div`
 `;
 
 const Item = () => {
-  const Lang = useSelector(state => state.Lang.lang);
+  const Lang = useStore().getState().Lang.lang;
   const showPage = (url) => {
       window.open(url);
   };
