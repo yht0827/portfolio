@@ -7,14 +7,14 @@ const ItemWrapper = styled.div`
 width: 90%;
 margin: 20px auto;
 padding: 20px 0;
-background-color: #fff;
+background-color: #ffeaa7;
 border-radius: 20px;
 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 `;
 
 const ItemTitle = styled.div`
 margin: 10px 0;
-font-size: 1.5rem;
+font-size: 2.5rem;
 font-weight: bold;
 color: dodgerblue;
 `;
@@ -24,24 +24,26 @@ const ItemMoreButton = styled.button`
     outline: none;
     border: none;
     border-radius: 5px;
-    margin-top: 10px;
     padding: 5px 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
-
+    background-color: #f8a5c2;
+    font-weight: bold;
+    color:#f1f2f6;
     &:hover {
       box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+      
     }
 `;
 
 const ItemImage = styled.img`
-        border-radius: 10px;
+    border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
     @media only screen and (min-width: 320px), (max-width: 768px) {
       width: 80%;
       height: 50%;
     }
     @media only screen and (min-width: 1224px) {
-      width: 50%;
+      width: 80%;
       height: 30%;
     }
 `;
@@ -50,11 +52,19 @@ const ItemInfo = styled.div`
     margin: 10px 0px;
 `;
 const ItemInfoText = styled.div`
+    margin-top: 2px;
     padding: 5px;
+    font-style: italic;
+`;
+const ItemDate = styled.div`
+    padding: 5px;
+    color: ${props=> props.color};
+    font-weight: bold;
 `;
 const ItemInfoTextColor = styled.b`
     color: ${props=> props.color};
-    font-size: 23px;
+    font-size: 1.2rem;
+    font-weight: bold;
 `;
 
 const ItemUsedLang = styled.div`
@@ -62,7 +72,7 @@ const ItemUsedLang = styled.div`
     margin: 10px 0;
     font-size: 1.5rem;
     font-weight: bold;
-    color: yellowgreen;
+    color: #8e44ad;
 `;
 
 const Item = () => {
@@ -78,12 +88,12 @@ const Item = () => {
                 <ItemImage src={project.img} />
                 <ItemUsedLang >{project.lang}</ItemUsedLang>
                 <ItemInfo>
-                  <ItemInfoTextColor color="sandybrown">{Lang === "en"? "Information":"정보"}</ItemInfoTextColor>  
+                  <ItemInfoTextColor color="#2ecc71">{Lang === "en"? "Information":"정보"}</ItemInfoTextColor>  
                     { project.infotext.map((text,subindex) => <ItemInfoText key={subindex}>{text}</ItemInfoText>)}
                 </ItemInfo>
                 <ItemInfo>
-                  <ItemInfoTextColor color="indianred">{Lang === "en"? "Date":"날짜"}</ItemInfoTextColor>  
-                  <ItemInfoText>{project.year}</ItemInfoText>
+                  <ItemInfoTextColor color="#e74c3c">{Lang === "en"? "Date":"날짜"}</ItemInfoTextColor>  
+                  <ItemDate color="#2980b9">{project.year}</ItemDate>
                 </ItemInfo> 
                 <ItemMoreButton onClick={() => showPage(project.showpage)}>{Lang === "en"? "more":"더보기"}</ItemMoreButton>
             </ItemWrapper>)

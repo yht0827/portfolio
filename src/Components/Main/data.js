@@ -192,22 +192,64 @@ const commandCheck = (command) => {
 const projects = {
     "en" : {
         "projects":[{
-            title:"BitMiner",
-            img:"Images/Mario.jpg",
-            lang:"JavaScript",
-            infotext:["Electron + Vue.js based game","Cross platform game!"],
+            title:"Java Pos System",
+            img:"Images/projects/POS.png",
+            lang:"Java Swing",
+            infotext:["- Login, Table, Menu, Sales","- Understand to real POS system with Java"],
+            year:"2018",
+            showpage:"https://github.com/yht0827/projects/tree/master/JavaProject",
+        },{
+            title:"Train booking site",
+            img:"Images/projects/HRT.png",
+            lang:"Java, Jsp, Jquery, BootStrap(CSS), OracleDB",
+            infotext:["- JOIN, LOGIN, DESTINATION, BOOK, CANCEL, CHECK","- Make Real Train Booking site with Java"],
+            year:"2018",
+            showpage:"https://github.com/yht0827/projects/tree/master/HRT_Proj",
+        },{
+            title:"Youtube site",
+            img:"Images/projects/Youtube.png",
+            lang:"Javascript(ES6), Pug(Jade), Node, Express, MongoDB",
+            infotext:["- Login, Join, Video Player,Video Record, Video Upload","- Cloning Youtube Page with Javascript"],
             year:"2019",
-            showpage:"https://www.google.com",
+            showpage:"https://github.com/yht0827/youtube-clone",
+        },{
+            title:"Certificate Management Platform",
+            img:"Images/projects/Platform.png",
+            lang:"HyperLedger, React(Recompose, Redux), Nodejs(Fabric Network)",
+            infotext:["- Using Private BlockChain HyperLedger for Certificate Management","- Request Certificate Data When Special Status is Active"],
+            year:"2019",
+            showpage:"https://github.com/yht0827/JobSearchPlatform",
         }]
     },
     "kr" : {
         "projects":[{
-            title:"비트채굴기",
-            img:"Images/Mario.jpg",
-            lang:"자바스크립트",
-            infotext:["Electron + Vue.js 기반의 게임입니다","크로스 플랫폼 게임입니다!"],
+            title:"자바 POS 시스템",
+            img:"Images/projects/POS.png",
+            lang:"자바 스윙",
+            infotext:["- 로그인, 테이블선택, 메뉴선택, 매출화면을 구현","- 실제 POS시스템 기능을 구현하고 JAVA의 전반적으로 이해"],
+            year:"2018",
+            showpage:"https://github.com/yht0827/projects/tree/master/JavaProject",
+        },{
+            title:"고속 열차 예매 사이트",
+            img:"Images/projects/HRT.png",
+            lang:"자바, JSP, 제이쿼리, 부트스트랩(CSS), 오라클DB",
+            infotext:["- 회원가입, 로그인, 목적지 선택, 예약, 예약취소, 예약확인 등","- 실제 고속열차 예매 사이트를 기반으로 구현"],
+            year:"2018",
+            showpage:"https://github.com/yht0827/projects/tree/master/HRT_Proj",
+        },{
+            title:"유튜브 사이트",
+            img:"Images/projects/Youtube.png",
+            lang:"자바스크립트(ES6), 퍼그, 노드 ,익스프레스, 몽고DB",
+            infotext:["- 로그인, 회원가입, 비디오 플레이어, 비디오 촬영, 업로드 등을 구현","- 실제 유튜브 사이트를 기반으로 구현"],
             year:"2019",
-            showpage:"https://www.google.com",
+            showpage:"https://github.com/yht0827/youtube-clone",
+        },{
+            title:"블록체인 기반 자격증 관리 플랫폼",
+            img:"Images/projects/Platform.png",
+            lang:"하이퍼레저, 리액트(Recompose, Redux), 노드(패브릭 네트워크)",
+            infotext:["- 하이퍼레저를 이용한 프라이빗 블록체인으로 이력관리 플랫폼을 제작","- 상황에 따라 블록체인에 배포한 자격증을 요청 할 수 있다."],
+            year:"2019",
+            showpage:"https://github.com/yht0827/JobSearchPlatform",
         }]
     },
 };
