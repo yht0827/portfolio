@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import LazyLoad from "react-lazyload";
 import { useStore } from "react-redux";
 import { projects } from "Components/Main/data";
 
@@ -86,9 +85,7 @@ const Item = () => {
         projects[Lang]["projects"].map((project, index)=>
             <ItemWrapper key={index}>
                 <ItemTitle>{project.title}</ItemTitle>
-                <LazyLoad>
                     <ItemImage src={project.img} />
-                </LazyLoad>
                 <ItemUsedLang >{project.lang}</ItemUsedLang>
                 <ItemInfo>
                   <ItemInfoTextColor color="#2ecc71">{Lang === "en"? "Information":"정보"}</ItemInfoTextColor>  
