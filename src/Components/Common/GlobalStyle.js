@@ -6,10 +6,10 @@ ${reset};
 
     @font-face {
             font-family: "NanumSquareRound";
-            src:url('/fonts/NanumSquareRoundR.eot');
-            src:url('/fonts/NanumSquareRoundR.eot#iefix') format('embedded-opentype'),
-            url('/fonts/NanumSquareRoundR.woff') format('woff'),
-            url('/fonts/NanumSquareRoundR.ttf') format('truetype');
+            src:url("fonts/NanumSquareRoundR.eot");
+            src:url("fonts/NanumSquareRoundR.eot#iefix") format("embedded-opentype"),
+            url("fonts/NanumSquareRoundR.woff") format("woff"),
+            url("fonts/NanumSquareRoundR.ttf") format("truetype");
     }
     
     * {
