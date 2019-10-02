@@ -54,7 +54,6 @@ const ItemInfo = styled.div`
 const ItemInfoText = styled.div`
     margin-top: 2px;
     padding: 5px;
-    font-style: italic;
 `;
 const ItemDate = styled.div`
     padding: 5px;
@@ -70,7 +69,7 @@ const ItemInfoTextColor = styled.b`
 const ItemUsedLang = styled.div`
     padding: 0;
     margin: 10px 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: #8e44ad;
 `;
@@ -95,7 +94,7 @@ const Item = () => {
                   <ItemInfoTextColor color="#e74c3c">{Lang === "en"? "Date":"날짜"}</ItemInfoTextColor>  
                   <ItemDate color="#2980b9">{project.year}</ItemDate>
                 </ItemInfo> 
-                <ItemMoreButton onClick={() => showPage(project.showpage)}>{Lang === "en"? "more":"더보기"}</ItemMoreButton>
+                <ItemMoreButton onClick={() => showPage(project.showpage)}>{Lang === "en"? "More":"더보기"}</ItemMoreButton>
             </ItemWrapper>)
     )
 };

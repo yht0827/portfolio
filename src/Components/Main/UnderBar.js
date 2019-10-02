@@ -40,7 +40,7 @@ const MenuTime = styled.div`
       color: #fff;
       line-height: 50px;
       text-align: center;
-      font-size: 1rem;
+      font-size: 0.89rem;
       float: right;
       background-color: rgba(0, 0, 0, .2);
 `;

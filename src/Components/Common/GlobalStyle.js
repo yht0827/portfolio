@@ -4,6 +4,15 @@ import reset from "styled-reset";
 const GlobalStyle = createGlobalStyle`
 ${reset};
 
+    @font-face {
+            font-family: "NanumSquareRound";
+            src:url('/fonts/NanumSquareRoundR.eot');
+            src:url('/fonts/NanumSquareRoundR.eot#iefix') format('embedded-opentype'),
+            url('/fonts/NanumSquareRoundR.woff') format('woff'),
+            url('/fonts/NanumSquareRoundR.ttf') format('truetype');
+            src:local(¡Ø), url('/fonts/NanumSquareRoundR.woff') format('woff');
+    }
+    
     * {
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
