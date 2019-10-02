@@ -10,7 +10,6 @@ ${reset};
             src:url('/fonts/NanumSquareRoundR.eot#iefix') format('embedded-opentype'),
             url('/fonts/NanumSquareRoundR.woff') format('woff'),
             url('/fonts/NanumSquareRoundR.ttf') format('truetype');
-            src:local(¡Ø), url('/fonts/NanumSquareRoundR.woff') format('woff');
     }
     
     * {
