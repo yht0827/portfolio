@@ -215,7 +215,7 @@ const App = () => {
     return (
     <>
     <Helmet>
-         <title>Portfolio</title>
+         <title>HT's Portfolio</title>
     </Helmet>
     <Background>
       <FadeIn delay={300} transitionDuration={700}>
