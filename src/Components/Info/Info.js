@@ -83,7 +83,7 @@ const Info = ({changeMenu}) => {
         <Information>
             <InfoWrapper>
                 <LogoWrapper>
-                    <InfoLogo src="Images/react.png" loading="lazy" />
+                    <InfoLogo src="Images/react.png" />
                 </LogoWrapper>
                 <InfoDetail>
                     <InfoDetailTitle>{infos[Lang]["title"]}</InfoDetailTitle>

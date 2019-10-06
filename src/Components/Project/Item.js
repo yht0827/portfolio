@@ -105,7 +105,7 @@ const Item = () => {
             <ItemWrapper key={index}>
                 <ItemTitle>{project.title}</ItemTitle>
                 <ItemFrame>
-                    <ItemImage src={project.img} loading="lazy" />
+                    <ItemImage src={project.img} />
                 </ItemFrame>
                 <ItemUsedLang >{project.lang}</ItemUsedLang>
                 <ItemInfo>
