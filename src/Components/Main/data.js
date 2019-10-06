@@ -19,7 +19,17 @@ const folders = [
         "kr-name": "깃허브",
         "en-name": "Github",
         "image": Dir+"github.png"
-    }, 
+    },
+    {
+        "kr-name": "브라우저",
+        "en-name": "Browser",
+        "image": Dir+"chrome.png"
+    },
+    {
+        "kr-name": "오픈채팅",
+        "en-name": "OpenChat",
+        "image": Dir+"kakao.png"
+    },
     {
         "kr-name": "이메일",
         "en-name": "Email",

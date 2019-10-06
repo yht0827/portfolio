@@ -43,7 +43,7 @@ const ProfileBirth = styled.div`
 
 const ProfileMotto = styled.div`
     margin-top: 15px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     color: gray;
     animation: ${bounce} 1s alternate infinite;

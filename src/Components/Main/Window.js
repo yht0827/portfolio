@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Project } from "Components/Project";
 import { Terminal } from "Components/Terminal";
+import { Chrome } from "Components/Chrome";
 import { Info } from "Components/Info";
 import { AboutMe } from "Components/AboutMe";
 import { folders } from "Components/Main/data";
@@ -95,8 +96,6 @@ const Button = styled.span`
     background-color: ${props => props.color};
     text-align: center;
     line-height: 16px;
-    &::before {
-    }
 `;
 
 const TitleContent = styled.div`
@@ -130,7 +129,8 @@ const Window = ({ changeMenu, index, Lang }) => (
               {index === 0 && <Project />}
               {index === 1 && <AboutMe changeMenu={changeMenu} />}
               {index === 2 && <Terminal changeMenu={changeMenu} />}
-              {index === 5 && <Info changeMenu={changeMenu} />}
+              {index === 4 && <Chrome />}
+              {index === 7 && <Info changeMenu={changeMenu} />}
       </WindowWrapper>
 );
 

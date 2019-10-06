@@ -71,11 +71,13 @@ const StartMenu = styled.div`
       border-radius: 0;
       height: 100%;
       width: 100%;
+      background-color: rgba(0, 0, 0, .9);
     }
     @media only screen and (min-width: 1224px) {
       width: 25rem;
       height: 40rem;
       border-top-right-radius: 10px;
+      background-color: rgba(0, 0, 0, .5);
     }
 `;
 

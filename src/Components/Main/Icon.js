@@ -18,14 +18,17 @@ const IconWraper = styled.div`
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        max-width: 30rem;
+        max-width: 38rem;
         padding: 1rem;
+        @media only screen and (max-width: 611px) {
+            max-width: 20rem;
+        }
 `;
 
 const IconContent = styled.div`
   cursor: pointer;
   width: 8rem;
-  height: 8rem;
+  height: 7rem;
   padding: 1rem;
   border-radius: 5px;
   text-align: center;
@@ -71,7 +74,10 @@ const Icon = () => {
 
         if(index === 3){
             window.open("https://github.com/yht0827");
-        }else if(index === 4){
+        }else if(index === 5){
+            window.open("https://open.kakao.com/o/svxAQRGb");
+        }
+        else if(index === 6){
             window.open("mailto:yangheetae0827@naver.com");
         }else{
             openMenu? setMenu(false): setMenu(true);

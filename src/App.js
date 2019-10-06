@@ -137,7 +137,7 @@ const Timer = styled.div`
     @media only screen and (min-width: 320px) {
         font-size: 2.5rem;
       }
-      @media only screen and (min-width: 768px), (min-width: 1224px) {
+      @media only screen and (min-width: 768px),(min-width: 1224px) {
         font-size: 4rem;
       }
 `;

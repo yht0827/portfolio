@@ -17,21 +17,36 @@ margin: 10px 0;
 font-size: 2.5rem;
 font-weight: bold;
 color: dodgerblue;
+@media only screen and (min-width: 320px), (max-width: 768px) {
+        font-size: 1.8rem;
+    }
+    @media only screen and (min-width: 1224px) {
+        font-size: 2.5rem;
+    }
 `;
 
 const ItemMoreButton = styled.button`
     cursor: pointer;
     outline: none;
-    border: none;
+    border: 1px solid #0984e3;
     border-radius: 5px;
     padding: 5px 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .2);
-    background-color: #f8a5c2;
     font-weight: bold;
-    color:#f1f2f6;
+    background-color: transparent;
+    color: #0984e3;
     &:hover {
       box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-      
+    }
+`;
+const ItemFrame = styled.div`
+    @media only screen and (min-width: 320px), (max-width: 768px) {
+      width: 100%;
+      min-height: 14rem;
+    }
+    @media only screen and (min-width: 1224px) {
+      width: 100%;
+      min-height: 22.5rem;
     }
 `;
 
@@ -40,11 +55,9 @@ const ItemImage = styled.img`
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
     @media only screen and (min-width: 320px), (max-width: 768px) {
       width: 80%;
-      height: 50%;
     }
     @media only screen and (min-width: 1224px) {
       width: 80%;
-      height: 30%;
     }
 `;
 
@@ -73,6 +86,12 @@ const ItemUsedLang = styled.div`
     font-size: 1.3rem;
     font-weight: bold;
     color: #8e44ad;
+    @media only screen and (min-width: 320px), (max-width: 768px) {
+        font-size: 1rem;
+    }
+    @media only screen and (min-width: 1224px) {
+        font-size: 1.3rem;
+    }
 `;
 
 const Item = () => {
@@ -85,7 +104,9 @@ const Item = () => {
         projects[Lang]["projects"].map((project, index)=>
             <ItemWrapper key={index}>
                 <ItemTitle>{project.title}</ItemTitle>
-                    <ItemImage src={project.img} />
+                <ItemFrame>
+                    <ItemImage src={project.img} loading="lazy" />
+                </ItemFrame>
                 <ItemUsedLang >{project.lang}</ItemUsedLang>
                 <ItemInfo>
                   <ItemInfoTextColor color="#2ecc71">{Lang === "en"? "Information":"정보"}</ItemInfoTextColor>  

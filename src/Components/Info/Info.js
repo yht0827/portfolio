@@ -77,7 +77,7 @@ const Info = ({changeMenu}) => {
     return (
         <Information>
             <InfoWrapper>
-                <InfoLogo src="Images/react.png" />
+                <InfoLogo src="Images/react.png" loading="lazy" />
                 <InfoDetail>
                     <InfoDetailTitle>{infos[Lang]["title"]}</InfoDetailTitle>
                     <InfoDetailText>
