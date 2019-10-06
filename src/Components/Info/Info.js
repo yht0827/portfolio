@@ -70,6 +70,11 @@ const BackButton = styled.button`
       }
 `;
 
+const LogoWrapper = styled.div`
+    width: 100%;
+    min-height: 260px;
+`;
+
 const Info = ({changeMenu}) => {
 
     const Lang = useStore().getState().Lang.lang;
@@ -77,7 +82,9 @@ const Info = ({changeMenu}) => {
     return (
         <Information>
             <InfoWrapper>
-                <InfoLogo src="Images/react.png" loading="lazy" />
+                <LogoWrapper>
+                    <InfoLogo src="Images/react.png" loading="lazy" />
+                </LogoWrapper>
                 <InfoDetail>
                     <InfoDetailTitle>{infos[Lang]["title"]}</InfoDetailTitle>
                     <InfoDetailText>
