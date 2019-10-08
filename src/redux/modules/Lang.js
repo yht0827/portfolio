@@ -14,7 +14,7 @@ export const changeLog = createAction(CHANGE_LOG);
 // initial state
 
 const initialState = {
-    lang: "en",
+    lang: "kr",
     isLogged: false,
 };
 
