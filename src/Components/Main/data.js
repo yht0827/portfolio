@@ -92,7 +92,7 @@ const infos = {
         developer: "개발자 : ",
         name: "양희태",
         enddate: "개발 완료 : ",
-        language: "사용언어 : 리액트 훅스",
+        language: "사용언어 : 리액트",
         source : "소스 코드 : ",
         github : "깃 허브",
         back : "뒤로 가기"
@@ -243,7 +243,7 @@ const projects = {
     },
     "kr" : {
         "projects":[{
-            title:"자바 POS 시스템",
+            title:"자바 POS 정산 시스템",
             img:"Images/projects/POS.png",
             lang:"자바 스윙",
             infotext:["로그인, 테이블선택, 메뉴선택, 매출화면을 구현","실제 POS시스템 기능을 구현하고 JAVA의 전반적으로 이해"],
