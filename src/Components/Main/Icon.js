@@ -74,11 +74,12 @@ const Icon = () => {
 
         if(index === 3){
             window.open("https://github.com/yht0827");
-        }else if(index === 5){
+        } else if(index === 5){
             window.open("https://open.kakao.com/o/svxAQRGb");
-        }
-        else if(index === 6){
+        } else if(index === 6) {
             window.open("mailto:yangheetae0827@naver.com");
+        } else if(index === 7) {
+            window.open("https://yht0827.notion.site/HT-s-Tech-Blog-9b93593660eb4baebb6dcb6c21cebd18");
         }else{
             openMenu? setMenu(false): setMenu(true);
         }

@@ -101,7 +101,7 @@ const Item = () => {
   };
 
   return(
-        projects[Lang]["projects"].map((project, index)=>
+        projects[Lang]["projects"].slice(0).reverse().map((project, index)=>
             <ItemWrapper key={index}>
                 <ItemTitle>{project.title}</ItemTitle>
                 <ItemFrame>

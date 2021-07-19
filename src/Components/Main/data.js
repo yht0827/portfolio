@@ -36,9 +36,9 @@ const folders = [
         "image": Dir+"email.png"
     },
     {
-        "kr-name": "정보",
-        "en-name": "Information",
-        "image": Dir+"information.png"
+        "kr-name": "블로그",
+        "en-name": "Blog",
+        "image": Dir+"blog.png"
     },  
 ];
 
@@ -76,34 +76,11 @@ const Loginmenu = {
     },
 }
 
-const infos = {
-   "en": {
-    title: "React.js Portfolio",
-    developer: "Developer : ",
-    name: "YHT",
-    enddate: "Development end date : ",
-    language: "Languages : React Hooks",
-    source : "Source code : ",
-    github : "Github",
-    back : "back"
-    },
-    "kr":{
-        title: "리액트 기반 포트폴리오",
-        developer: "개발자 : ",
-        name: "양희태",
-        enddate: "개발 완료 : ",
-        language: "사용언어 : 리액트",
-        source : "소스 코드 : ",
-        github : "깃 허브",
-        back : "뒤로 가기"
-    },
-};
-
 const profiles = {
     "en" : {
         name : "YangHeeTae",
         birth : "Birthday 1992.08.27",
-        motto : "Motto: Where there is a will there is a way",
+        motto : "I am interested in Programming.",
         grade : "Education",
         uni : "Catholic University of Korea",
         major : "Major",
@@ -114,7 +91,7 @@ const profiles = {
     "kr" : {
         name : "양희태",
         birth : "생년월일 1992.08.27",
-        motto : "좌우명: 뜻이 있는 곳에 길이 있다.",
+        motto : "개발에 관심을 가지고 공부하고 있습니다.",
         grade : "학력",
         uni : "가톨릭대학교",
         major : "전공",
@@ -274,4 +251,4 @@ const projects = {
     },
 };
 
-export { folders, startmenu, Loginmenu, infos, profiles, projects, commandCheck };
+export { folders, startmenu, Loginmenu, profiles, projects, commandCheck };
