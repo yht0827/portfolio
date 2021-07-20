@@ -251,4 +251,9 @@ const projects = {
     },
 };
 
-export { folders, startmenu, Loginmenu, profiles, projects, commandCheck };
+const imgSrc = ["Icons/folder.png", "Icons/blog.png", "Icons/chrome.png", "Icons/email.png", "Icons/folder.png",
+    "Icons/github.png", "Icons/information.png", "Icons/kakao.png", "Icons/Me.png", "Icons/terminal.png", "google.png",
+    "poweroff.png", "react.png", "window.png", "projects/HRT.png", "projects/Platform.png", "projects/POS.png",
+    "projects/Youtube.png"];
+
+export { folders, startmenu, Loginmenu, profiles, projects, imgSrc, commandCheck };
