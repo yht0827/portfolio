@@ -97,7 +97,7 @@ const profiles = {
         major : "전공",
         majors: ["정보통신전자공학", "컴퓨터공학"],
         certificate: "자격증",
-        certificates:["정보보안기사","정보처리기사","SQL개발자(SQLD)","SW 테스트 전문가(일반)","컴퓨터 활용능력(1급)"],
+        certificates:["정보보안기사","정보처리기사","SQL개발자(SQLD)","SW 테스트 전문가 일반(CSTS)","컴퓨터 활용능력(1급)"],
     },
 };
 
@@ -108,10 +108,10 @@ const commandCheck = (command) => {
     if(command === "ls"){
         result = {
             command:command,
-            en:[`Project    AboutMe    Terminal    Github`,
-            `Browser    OpenChat    Email    Information`],
-            kr:[`프로젝트    내정보    터미널    깃허브`,
-            `브라우저    오픈채팅    이메일    정보`],
+            en:[`Project    Profile    Terminal    Github`,
+            `Browser    OpenChat    Email    Blog`],
+            kr:[`프로젝트    프로필    터미널    깃허브`,
+            `브라우저    오픈채팅    이메일    블로그`],
         };
     }else if(command === "pwd"){
         result = {
@@ -123,21 +123,21 @@ const commandCheck = (command) => {
         result = {
             command:command,
             en:[`drwxr-xr-x 2 HT HT 4096 Jul 09:22 Project`,
-                    `drwxr-xr-x 2 HT HT 4096 Sep 05:08 AboutMe`,
+                    `drwxr-xr-x 2 HT HT 4096 Sep 05:08 Profile`,
                     "-rwxr-xr-x 1 HT HT   16 Sep 07:17 Terminal",
                     `-rwxr-xr-x 1 HT HT  660 Jun 08:44 Github`,
                     `-rwxr-xr-x 1 HT HT  631 Jul 18:42 Browser`,
                     `-rwxr-xr-x 1 HT HT  542 Aug 16:50 OpenChat`,
                     `-rwxr-xr-x 1 HT HT  168 Jun 15:35 Email`,
-                    `drwxr-xr-x 2 HT HT 4096 Jul 10:51 Information`],
+                    `drwxr-xr-x 2 HT HT 4096 Jul 10:51 Blog`],
             kr:[`drwxr-xr-x 2 HT HT 4096 7월 09:22 프로젝트`,
-            `drwxr-xr-x 2 HT HT 4096 9월 05:08 내정보`,
+            `drwxr-xr-x 2 HT HT 4096 9월 05:08 프로필`,
             "-rwxr-xr-x 1 HT HT   16 9월 07:17 터미널",
             `-rwxr-xr-x 1 HT HT  660 6월 08:44 깃허브`,
             `-rwxr-xr-x 1 HT HT  631 7월 18:42 브라우저`,
             `-rwxr-xr-x 1 HT HT  542 8월 16:50 오픈채팅`,
             `-rwxr-xr-x 1 HT HT  168 6월 15:35 이메일`,
-            `drwxr-xr-x 2 HT HT 4096 7월 10:51 정보`],
+            `drwxr-xr-x 2 HT HT 4096 7월 10:51 블로그`],
         };
     }else if(command === "ls -al"){
         result = {
@@ -145,23 +145,23 @@ const commandCheck = (command) => {
             en:[`drwxr-xr-x 2 HT HT 4096 May 19:50 .`,
                     `drwxr-xr-x 4 HT HT 4096 May 19:50 ..`,
                     `drwxr-xr-x 2 HT HT 4096 Jul 09:22 Project`,
-                    `drwxr-xr-x 2 HT HT 4096 Sep 05:08 AboutMe`,
+                    `drwxr-xr-x 2 HT HT 4096 Sep 05:08 Profile`,
                     "-rwxr-xr-x 1 HT HT   16 Sep 07:17 Terminal",
                     `-rwxr-xr-x 1 HT HT  660 Jun 08:44 Github`,
                     `-rwxr-xr-x 1 HT HT  631 Jul 18:42 Browser`,
                     `-rwxr-xr-x 1 HT HT  542 Aug 16:50 OpenChat`,
                     `-rwxr-xr-x 1 HT HT  168 Jun 15:35 Email`,
-                    `drwxr-xr-x 2 HT HT 4096 Jul 10:51 Information`],
+                    `drwxr-xr-x 2 HT HT 4096 Jul 10:51 Blog`],
             kr:[`drwxr-xr-x 2 HT HT 4096 5월 19:50 .`,
             `drwxr-xr-x 4 HT HT 4096 5월 19:50 ..`,
             `drwxr-xr-x 2 HT HT 4096 7월 09:22 프로젝트`,
-            `drwxr-xr-x 2 HT HT 4096 9월 05:08 내정보`,
+            `drwxr-xr-x 2 HT HT 4096 9월 05:08 프로필`,
             "-rwxr-xr-x 1 HT HT   16 9월 07:17 터미널",
             `-rwxr-xr-x 1 HT HT  660 6월 08:44 깃허브`,
             `-rwxr-xr-x 1 HT HT  631 7월 18:42 브라우저`,
             `-rwxr-xr-x 1 HT HT  542 8월 16:50 오픈채팅`,
             `-rwxr-xr-x 1 HT HT  168 6월 15:35 이메일`,
-            `drwxr-xr-x 2 HT HT 4096 7월 10:51 정보`],
+            `drwxr-xr-x 2 HT HT 4096 7월 10:51 블로그`],
         };
     }else if(command === "date"){
         result = {
