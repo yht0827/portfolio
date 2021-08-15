@@ -79,7 +79,7 @@ const Icon = () => {
         } else if(index === 6) {
             window.open("mailto:yangheetae0827@naver.com");
         } else if(index === 7) {
-            window.open("https://yht0827.notion.site/HT-s-Tech-Blog-9b93593660eb4baebb6dcb6c21cebd18");
+            window.open("https://ht.oopy.io/");
         }else{
             openMenu? setMenu(false): setMenu(true);
         }
