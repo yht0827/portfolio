@@ -75,7 +75,7 @@ const Icon = () => {
         if(index === 3){
             window.open("https://github.com/yht0827");
         } else if(index === 5){
-            window.open("https://open.kakao.com/o/svxAQRGb");
+            window.open("https://open.kakao.com/o/sjuIKjLb");
         } else if(index === 6) {
             window.open("mailto:yangheetae0827@naver.com");
         } else if(index === 7) {
